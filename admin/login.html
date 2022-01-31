@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Login | Àrea Restrita!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:title" content="Login | Àrea Restrita!">
+	<meta charset="utf-8">
+	<link rel="icon" type="imagem/png" href="../images/atencao.png" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="../js/jquery-min_admin.js"></script>
+
+	<link rel="stylesheet" href="../css/style_login_admin.css">
+</head>
+<body>
+	<span class="erro" id="erro">
+		<p>Campo Incorreto!</p>
+	</span>
+	<section class="pop-up" id="pop-up">
+		<h2>Área Restrita</h2>
+		<p>Isso é uma área de administração do site.</p>
+		<p class="afirmacaoP">Deseja Continuar?</p>
+		<span>
+			<button class="continuar" id="continar" onclick="continuar()">Quero Continuar</button>
+			<button class="voltar" id="voltar" onclick="voltar_AreaRestrita()">Voltar</button>
+		</span>
+	</section>
+	<section class="login-container" id="login_container">
+		<div class="logo">
+			<img src="../images/favicon.png">
+		</div>
+		<div>
+			<p></p>
+		</div>
+		<form action="" id="form" method="POST">
+			<h2>Account Login</h2>
+			<label>Usuário</label>
+			<input type="text" id="user_login" placeholder="Usuário">
+			<label>Senha</label>
+			<input type="password" id="pass_login" placeholder="**********">
+			<span>
+				<input type="checkbox" id="lembrar_login">
+				<label for="lembrar_login">Lembrar Login</label>
+			</span>
+			<button>Login</button>
+		</form>
+	</section>
+
+	<script src="../js/admin.js"></script>
+</body>
+</html>

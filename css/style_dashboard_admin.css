@@ -1,0 +1,469 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    user-zoom: none;
+    user-drag: none; 
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	list-style: none;
+}
+
+html,body{scroll-behavior: smooth;}
+body{
+	overflow: hidden;
+	background: #E9EBED;
+	display: flex;
+	flex-direction: column;
+}
+body::-webkit-scrollbar{
+	width: 0;
+}
+
+header{
+	background: #C0744E;
+	width: 100%;
+	height: 10vh;
+	position: relative;
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	z-index: 1;
+}
+header .logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #f7f7f9;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 10pt;
+	cursor: pointer;
+	margin-left: 2rem;
+}
+header .logo svg{
+	width: 25px;
+	height: 25px;
+	margin-right: .5rem;
+}
+header section{ display: flex; }
+header section .nav{margin-right: 2rem;}
+header section .nav-header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10rem;
+	height: 2rem;
+	border: 2px solid #fff;
+
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 12pt;
+	color: #f5f5f9;
+
+	cursor: pointer;
+}
+header section .nav-header p{margin-left: 1rem;}
+
+header section .account-header{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 12pt;
+	color: #f5f5f9;
+}
+header section .account-header i{
+	font-size: 20pt;
+}
+
+main{display: flex;	flex-direction: column;}
+main .main{
+	position: absolute;
+	top: 10vh;
+	left: 0vh;
+	padding: 2.5rem;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: stretch;
+	flex-direction: column;
+}
+main .main .header-main span{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 14pt;
+}
+main .main .header-main span h2{
+	color: #1D1C1C;
+}
+main .main .header-main span h3{
+	color: #333232;
+	margin-left: .5rem;
+}
+main .main .header-main .bread-crumb{
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 13pt;
+}
+main .main .header-main 
+.bread-crumb p{cursor: pointer;}
+
+
+main .main .visualBox{
+	margin-top: 2rem;
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+	align-items: center;
+}
+main .main .visualBox .boxDash{
+	background: #fff;
+	width: 16rem;
+	height: 11.5rem;
+	padding: 1rem;
+	font-family: 'IBM Plex Sans', sans-serif;
+	border-top: .5rem solid #B56239;
+	box-shadow: 5px 10px 15px rgba(0,0,0, .05);
+}
+main .main .visualBox .boxDash span{
+	background: #B56239;
+	width: 4.5rem;
+	height: 4.5rem;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	border-radius: 50%;
+}
+main .main .visualBox .boxDash span:hover{
+	animation: rotateIcon .5s ease-in-out both;
+}
+main .main .visualBox .boxDash span svg{
+	width: 35px;
+	height: 35px;
+	color: #fff;
+}
+main .main .visualBox .boxDash p{
+	font-size: 20pt;
+	color: #848484;
+	margin-left: .25rem;
+	margin-bottom: 0;
+}
+main .main .visualBox .boxDash h2{
+
+	font-size: 16pt;
+	color: #1D1C1C;
+	margin-left: .25rem;
+	margin-top: 0;
+}
+
+main .main .charts{
+	margin-top: 2rem;
+	margin-left: .25rem;
+	margin-right: .25rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+main .main .charts .chart{
+	padding: .5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main .main .charts .chart canvas{
+	background: #ffffffac;
+	padding: 1rem;
+	box-shadow: 10px 20px 30px rgba(0,0,0, .05);
+	backdrop-filter: blur(10px);
+}
+.logo .rotate{animation: svgLogoRotate .5s ease-in-out both;}
+@keyframes svgLogoRotate{
+	0%{transform: rotate(0);}
+	100%{transform: rotate(180deg);}
+}
+
+.pop-up-aviso{
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,.5);
+	backdrop-filter: blur(3.5px);
+
+	z-index: 999;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.pop-up-aviso .overlay{
+	background: rgba(255, 255, 255, 0.75);
+	backdrop-filter: blur(4px);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+
+	max-width: 25rem;
+	height: 12rem;
+	padding: 1rem;
+	text-align: center;
+
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+.pop-up-aviso .overlay 
+h2 svg{margin-right: .5rem; color: #C0744E;}
+.pop-up-aviso .overlay h2{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	color: #23232E;
+}
+.pop-up-aviso .overlay button{
+	background: transparent;
+	border: none;
+	border-top: 1px solid #848484;
+	width: 100%;
+	padding: .25rem .25rem 0 .25rem;
+
+	cursor: pointer;
+
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 12pt;
+
+	font-weight: 600;
+
+	color: #1568FF;
+}
+main .show-aside{display: block;}
+.hide{display: none;}
+
+
+
+
+main nav{
+	display: none;
+	position: relative;
+	width: 15rem;
+	height: 102vh;
+	background: #ca3102A9;
+	backdrop-filter: blur(30px);
+
+	z-index: 889;
+
+}
+main nav ul{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+}
+main nav ul li{
+	background: transparent;
+	
+	width: 100%;
+	padding: 1rem .85rem;
+
+	display: flex;
+	gap: 10px;
+
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 12pt;
+	font-weight: 500;
+	color: #f5f5f9;
+}
+main nav ul li:hover{
+	animation: list-hov .35s ease-in-out both;
+	cursor: pointer;
+}
+main nav ul li i{font-size: 14pt;}
+
+@keyframes list-hov {
+	0%{background: transparent;}
+	100%{background: rgba(177,92,67);}
+}
+
+@keyframes rotateIcon{
+	0%{transform: rotate(0);}
+	25%{transform: rotate(-25deg);}
+	50%{transform: rotate(25deg);}
+	100%{transform: rotate(0);}
+}
+header .hamburguer{ display: none; }
+@media (min-width: 420px) and (max-width: 890px) {
+	body{
+		overflow-x: hidden;
+		overflow-y: scroll;
+		background: #E9EBED;
+		display: flex;
+		flex-direction: column;
+	}
+	header{
+		background: #C0744E;
+		width: 100%;
+		height: 10vh;
+		position: fixed;
+		
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		z-index: 1;
+	}
+	/*header .hamburguer { display: block; position: absolute; top: 1rem; right: 1rem;}*/
+	header .hamburguer { cursor: pointer; display: block; padding: 0 1rem;}
+	header .hamburguer p{
+		width: 35px;
+		height: 4px;
+		margin: .65rem 0;
+		background: #fff;
+	}
+	header .hamburguer:hover{filter: brightness(80%);}
+	header .logo{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #f7f7f9;
+		font-family: 'IBM Plex Sans', sans-serif;
+		font-size: 10pt;
+		cursor: pointer;
+		margin-left: 2rem;
+	}
+	header .logo svg{
+		width: 25px;
+		height: 25px;
+		margin-right: .5rem;
+	}
+	header section{
+		position: absolute;
+		top: 10vh;
+		display: none;
+		width: 100%;
+		height: 5rem;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background: #C0744E;
+	}
+	header section .nav-header{
+		width: 100%;
+		height: 2rem;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: left;
+		border: none;
+
+		font-family: 'IBM Plex Sans', sans-serif;
+		font-size: 14pt;
+		color: #f5f5f9;
+
+		cursor: pointer;
+		margin: 0 auto;
+	}
+	header section .nav-header:hover{
+		background: rgba(0,0,0, .05);
+	}
+	header section .nav-header i{display: none;}
+	header section .account-header{
+		display: none;
+	}
+	#aside{position: fixed; top: 10vh;}
+	main{display: flex;	flex-direction: column;}
+	main .main{
+		position: absolute;
+		top: 10vh;
+		left: 0vh;
+		padding: 2.5rem;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: stretch;
+		flex-direction: column;
+	}
+	main .main .header-main span{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		font-family: 'IBM Plex Sans', sans-serif;
+		font-size: 14pt;
+	}
+	main .main .header-main span h2{
+		color: #1D1C1C;
+		margin-bottom: .5rem;
+	}
+	main .main .visualBox{
+		margin-top: 2rem;
+		display: flex;
+		gap: 15px;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	main .main .visualBox .boxDash{
+		background: #fff;
+		width: 10.5rem;
+		height: 11.5rem;
+		padding: .5rem;
+		font-family: 'IBM Plex Sans', sans-serif;
+		border-top: .5rem solid #B56239;
+	}
+	main .main .visualBox .boxDash span{
+		background: #B56239;
+		width: 4.5rem;
+		height: 4.5rem;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		border-radius: 50%;
+	}
+	main .main .visualBox .boxDash span:hover{
+		animation: rotateIcon .5s ease-in-out both;
+	}
+	main .main .visualBox .boxDash span svg{
+		width: 35px;
+		height: 35px;
+		color: #fff;
+	}
+	main .main .visualBox .boxDash p{
+		font-size: 20pt;
+		color: #848484;
+		margin-left: .25rem;
+		margin-bottom: 0;
+	}
+	main .main .visualBox .boxDash h2{
+
+		font-size: 16pt;
+		color: #1D1C1C;
+		margin-left: .25rem;
+		margin-top: 0;
+	}
+
+	main .main .charts{
+		margin-top: 2rem;
+		margin-left: .25rem;
+		margin-right: .25rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+	}
+	main .main .charts #myChartPie{margin-top: 7rem;}
+	main .main .charts .chart canvas{
+		background: #ffffffac;
+		padding: 1rem;
+		box-shadow: 10px 20px 30px rgba(0,0,0, .05);
+		backdrop-filter: blur(10px);
+	}
+}

@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Dashboard | Àrea Restrita!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:title" content="Login | Àrea Restrita!">
+	<meta charset="utf-8">
+	<link rel="icon" type="imagem/png" href="../images/atencao.png" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" href="../css/style_dashboard_admin.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body onload="showPopup();">
+
+
+
+	<header>
+		<span class="logo" id="logo">
+				<svg id="svglogo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Gear"><path d="M14 3.269C14 2.568 13.432 2 12.731 2H11.27C10.568 2 10 2.568 10 3.269v0c0 .578-.396 1.074-.935 1.286-.085.034-.17.07-.253.106-.531.23-1.162.16-1.572-.249v0a1.269 1.269 0 0 0-1.794 0L4.412 5.446a1.269 1.269 0 0 0 0 1.794v0c.41.41.48 1.04.248 1.572a7.946 7.946 0 0 0-.105.253c-.212.539-.708.935-1.286.935v0C2.568 10 2 10.568 2 11.269v1.462C2 13.432 2.568 14 3.269 14v0c.578 0 1.074.396 1.286.935.034.085.07.17.105.253.231.531.161 1.162-.248 1.572v0a1.269 1.269 0 0 0 0 1.794l1.034 1.034a1.269 1.269 0 0 0 1.794 0v0c.41-.41 1.04-.48 1.572-.249.083.037.168.072.253.106.539.212.935.708.935 1.286v0c0 .701.568 1.269 1.269 1.269h1.462c.701 0 1.269-.568 1.269-1.269v0c0-.578.396-1.074.935-1.287.085-.033.17-.068.253-.104.531-.232 1.162-.161 1.571.248v0a1.269 1.269 0 0 0 1.795 0l1.034-1.034a1.269 1.269 0 0 0 0-1.794v0c-.41-.41-.48-1.04-.249-1.572.037-.083.072-.168.106-.253.212-.539.708-.935 1.286-.935v0c.701 0 1.269-.568 1.269-1.269V11.27c0-.701-.568-1.269-1.269-1.269v0c-.578 0-1.074-.396-1.287-.935a7.755 7.755 0 0 0-.105-.253c-.23-.531-.16-1.162.249-1.572v0a1.269 1.269 0 0 0 0-1.794l-1.034-1.034a1.269 1.269 0 0 0-1.794 0v0c-.41.41-1.04.48-1.572.249a7.913 7.913 0 0 0-.253-.106C14.396 4.343 14 3.847 14 3.27v0z"/><path d="M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+				 <h2>CodeAcademy.com</h2>
+		</span>
+		<section>
+			<div class="email-header nav nav-header">
+				<i class="fas fa-envelope"></i>
+				<p>E-Mail</p>
+			</div>
+			<div class="inbox-header nav nav-header">
+				<i class="fas fa-inbox"></i>
+				<p>Inbox</p>
+			</div>
+			<div class="account-header nav">
+				<i class="fas fa-user-alt"></i>
+			</div>
+		</section>
+		<div class="hamburguer">
+			<p></p>
+			<p></p>
+			<p></p>
+		</div>
+	</header>
+	
+
+
+	<main>
+		<nav class="left-Aside" id="aside">
+			<ul>
+				<li class="child dashboard">
+					<i class="dashboard-icon fas fa-chart-line"></i>
+					Dashboard
+				</li>
+				<li class="alunos">
+					<i class="aluno-icon fas fa-user-friends"></i>
+					Alunos
+				</li>
+				<li class="cursos">
+					<i class="cursos-icon fas fa-folder"></i>
+					Cursos
+				</li>
+				<li class="cupom">
+					<i class="cupom-icon fas fa-ticket-alt"></i>
+					Cupom
+				</li>
+				<li class="newsletter">
+					<i class="newsletter-icon fas fa-users"></i>
+					NewsLetter
+				</li>
+				<li class="faq">
+					<i class="faq-icon fas fa-comments"></i>
+					FAQ
+				</li>
+				<li class="configuracoes">
+					<i class="config-icon fas fa-cogs"></i>
+					Configurações
+				</li>
+			</ul>
+		</nav>
+
+		<section class="main">
+			<article class="header-main">			
+				<span>
+					<h2>Dashboard</h2>
+					<h3>CodeAcademy</h3>
+				</span>
+
+				<div class="bread-crumb">
+					<p>Home > Admin > Dashboard</p>
+				</div>
+			</article>
+
+			<article class="visualBox">
+				<div class="visitas boxDash">
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-EyeOpen"><path d="M21.257 10.962c.474.62.474 1.457 0 2.076C19.764 14.987 16.182 19 12 19c-4.182 0-7.764-4.013-9.257-5.962a1.692 1.692 0 0 1 0-2.076C4.236 9.013 7.818 5 12 5c4.182 0 7.764 4.013 9.257 5.962z"/><circle cx="12" cy="12" r="3"/></svg>
+					</span>
+					<p>1.982</p>
+					<h2>Visitas Diarias</h2>
+				</div>
+				<div class="cursos boxDash">
+					<span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Folder"><path d="M22 19V9a2 2 0 0 0-2-2h-6.764a2 2 0 0 1-1.789-1.106l-.894-1.788A2 2 0 0 0 8.763 3H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2z"/></svg>
+					</span>
+					<p>21</p>
+					<h2>Cursos</h2>
+				</div>
+				<div class="vendas boxDash">
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Cart"><path d="M5 7h13.79a2 2 0 0 1 1.99 2.199l-.6 6A2 2 0 0 1 18.19 17H8.64a2 2 0 0 1-1.962-1.608L5 7z"/><path d="M5 7l-.81-3.243A1 1 0 0 0 3.22 3H2"/><path d="M8 21h2"/><path d="M16 21h2"/></svg>
+					</span>
+					<p>292</p>
+					<h2>Vendas</h2>
+				</div>
+
+				<div class="faturamento boxDash">
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Money"><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7z"/><circle cx="12" cy="12" r="3"/><path d="M2 9v0a4 4 0 0 0 4-4v0"/><path d="M18 19v0a4 4 0 0 1 4-4v0"/></svg>
+					</span>
+					<p>R$ 78.840</p>
+					<h2>Faturamento</h2>
+				</div>
+			</article>
+
+			<article class="charts">
+				<div class="chart1 chart">
+					<canvas id="myChartLine" width="376" height="246" style="width: 376px; height: 246px;"></canvas>
+				</div>
+				<div class="chart2 chart">
+					<canvas id="myChartPie" width="376" height="246" style="width: 376px; height: 246px;"></canvas>
+				</div>
+			</article>
+		</section>
+	</main>
+
+	<div class="pop-up-aviso" id="popup-aviso">
+		<div class="overlay">
+			<h2>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-TriangleAlertFill"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.543 2.598a2.821 2.821 0 0 0-5.086 0L1.341 18.563C.37 20.469 1.597 23 3.883 23h16.233c2.287 0 3.512-2.53 2.543-4.437L14.543 2.598zM12 8a1 1 0 0 1 1 1v5a1 1 0 1 1-2 0V9a1 1 0 0 1 1-1zm0 8.5a1 1 0 0 1 1 1v.5a1 1 0 1 1-2 0v-.5a1 1 0 0 1 1-1z"/></svg>
+				Atenção!
+		</h2>
+		<p>Atenção, para abrir a barra lateral de funções basta clicar em cima do logo "<svg class="svglogo" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Gear"><path d="M14 3.269C14 2.568 13.432 2 12.731 2H11.27C10.568 2 10 2.568 10 3.269v0c0 .578-.396 1.074-.935 1.286-.085.034-.17.07-.253.106-.531.23-1.162.16-1.572-.249v0a1.269 1.269 0 0 0-1.794 0L4.412 5.446a1.269 1.269 0 0 0 0 1.794v0c.41.41.48 1.04.248 1.572a7.946 7.946 0 0 0-.105.253c-.212.539-.708.935-1.286.935v0C2.568 10 2 10.568 2 11.269v1.462C2 13.432 2.568 14 3.269 14v0c.578 0 1.074.396 1.286.935.034.085.07.17.105.253.231.531.161 1.162-.248 1.572v0a1.269 1.269 0 0 0 0 1.794l1.034 1.034a1.269 1.269 0 0 0 1.794 0v0c.41-.41 1.04-.48 1.572-.249.083.037.168.072.253.106.539.212.935.708.935 1.286v0c0 .701.568 1.269 1.269 1.269h1.462c.701 0 1.269-.568 1.269-1.269v0c0-.578.396-1.074.935-1.287.085-.033.17-.068.253-.104.531-.232 1.162-.161 1.571.248v0a1.269 1.269 0 0 0 1.795 0l1.034-1.034a1.269 1.269 0 0 0 0-1.794v0c-.41-.41-.48-1.04-.249-1.572.037-.083.072-.168.106-.253.212-.539.708-.935 1.286-.935v0c.701 0 1.269-.568 1.269-1.269V11.27c0-.701-.568-1.269-1.269-1.269v0c-.578 0-1.074-.396-1.287-.935a7.755 7.755 0 0 0-.105-.253c-.23-.531-.16-1.162.249-1.572v0a1.269 1.269 0 0 0 0-1.794l-1.034-1.034a1.269 1.269 0 0 0-1.794 0v0c-.41.41-1.04.48-1.572.249a7.913 7.913 0 0 0-.253-.106C14.396 4.343 14 3.847 14 3.27v0z"/><path d="M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>CodeAcademy.com"</p>
+		<button id="ok-popup-aviso" onclick="hidePopup()">Ok</button>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" integrity="sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="../js/admin_dashboard.js"></script>
+	<script src="../js/backend.js"></script>
+	<script src="../js/chart-config.js"></script>
+</body>
+</html>
