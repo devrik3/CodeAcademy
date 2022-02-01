@@ -793,23 +793,13 @@ main .cursos .col-2 .curso:hover {
 	cursor: pointer;
 	border-radius: 50%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	margin: 0 5rem 0 5rem;
 }
 .infoProduto .detalheProduto
 .cabecalhoProduto .star{
-	background: #FAE474;
-	color: #333
-}
-
-.infoProduto .detalheProduto
-.cabecalhoProduto .close{
-	background: #d02229;
-}
-
-.infoProduto .detalheProduto .cabecalhoProduto i:hover{
-	margin: .25rem 5rem 0 5rem;
+	color: #FAE474;
 }
 .infoProduto .detalheProduto .conteudoProduto h2{
 	font-size: 20pt;
@@ -1235,7 +1225,7 @@ h3:hover{color: #D2D2D6; transition: .1s;}
 		align-items: center;
 		padding: 4rem 0 0;
 	}
-	.banner-cta .cta img{width: 200px; margin-left: 2rem;}
+	.banner-cta .cta img{display: none;}
 	.banner-cta .cta .conteudo{
 		margin-right: 1rem;
 		display: flex;
@@ -1399,15 +1389,30 @@ h3:hover{color: #D2D2D6; transition: .1s;}
 		text-align: center;
 
 
-		width: 36rem;
-		height: 40rem;
+		width: 100%;
+		height: 45rem;
 		padding: 2rem;
 		background: #333333AC;
 		backdrop-filter: blur(5px);
 
-		border-radius: 50px 50px 0 0;
+		border-radius: 0;
 	}
-
+	.infoProduto .detalheProduto .cabecalhoProduto p img{
+		width: 260px;
+		height: 260px;
+		padding: 0rem;
+		border-radius: 0%;
+		background: transparent;
+		backdrop-filter: blur(0px);
+		position: relative;
+		top: 0rem;
+		margin: 0 auto;
+	}
+	.infoProduto .detalheProduto .cabecalhoProduto .star{display: none;}
+	
+	.infoProduto .detalheProduto .cabecalhoProduto .close{
+		position: absolute;top: 1rem;right: -3rem;
+	}
 	.infoCompra{
 		position: absolute;
 		bottom: -40rem;
